@@ -9,6 +9,12 @@ import { NavigationBarComponent } from './component/navigation-bar/navigation-ba
 import { ProductCardComponent } from './component/product-card/product-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './component/footer/footer.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignUpComponent } from './component/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UserDataService } from './service/user-data.service';
+import { HomeComponent } from './component/home/home.component';
+
 
 
 @NgModule({
@@ -19,13 +25,18 @@ import { FooterComponent } from './component/footer/footer.component';
     NavigationBarComponent,
     ProductCardComponent,
     FooterComponent,
+    LoginComponent,
+    SignUpComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UserDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
